@@ -7,6 +7,11 @@ if (!navigator.geolocation) {
   throw new Error("your browser don't have to Geolocation");
 }
 
+import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+ 
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ215b2Rlc2Fycm9sbGFkb3IyMyIsImEiOiJjbHFmczg4N3ExMzF1MmtwbDNqZmNhc2V4In0.QIPd3sUgingBCXBoBzPOAw';
+
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <MapsApp />
