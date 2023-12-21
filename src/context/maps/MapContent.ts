@@ -5,7 +5,7 @@ interface MapContextProps {
   isMapReady: boolean;
   map?: Map;
 
-  // setMapReady: (value: boolean) => void;
+  setMap: (map: Map) => void;
 }
 
 export const MapContext = createContext({} as MapContextProps);
