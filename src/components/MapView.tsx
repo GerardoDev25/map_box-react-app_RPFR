@@ -13,7 +13,7 @@ export const MapView = () => {
     if (!isLoading) {
       const map = new mapboxgl.Map({
         container: mapDiv.current!,
-        style: 'mapbox://styles/mapbox/streets-v12',
+        style: 'mapbox://styles/mapbox/dark-v10',
         center: userLocation,
         zoom: 14,
       });
