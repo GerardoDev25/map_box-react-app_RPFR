@@ -1,6 +1,9 @@
-import { ChangeEvent, useRef } from 'react';
+import { ChangeEvent, useContext, useRef } from 'react';
+import { PlacesContext } from '../context';
 
 export const SearchBar = () => {
+  const {searchPlacesByTerm} = useContext(PlacesContext)
+  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const debounceRef = useRef<any>();
 
@@ -8,7 +11,7 @@ export const SearchBar = () => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       // todo search or exec consult
-      console.log(event.target.value);
+      searchPlacesByTerm(event.target.value);
     }, 300);
   };
 
