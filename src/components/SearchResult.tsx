@@ -5,13 +5,8 @@ import { LoadingPlaces } from '.';
 export const SearchResult = () => {
   const { places, isLoadingPlaces } = useContext(PlacesContext);
 
-  if (isLoadingPlaces) {
-    return <LoadingPlaces />;
-  }
-
-  if (places.length === 0) {
-    return <></>;
-  }
+  if (isLoadingPlaces) return <LoadingPlaces />;
+  if (places.length === 0) return <></>;
 
   return (
     <ul className='list-group mt-3'>
