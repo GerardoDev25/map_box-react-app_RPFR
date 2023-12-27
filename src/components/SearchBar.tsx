@@ -2,8 +2,8 @@ import { ChangeEvent, useContext, useRef } from 'react';
 import { PlacesContext } from '../context';
 
 export const SearchBar = () => {
-  const {searchPlacesByTerm} = useContext(PlacesContext)
-  
+  const { searchPlacesByTerm } = useContext(PlacesContext);
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const debounceRef = useRef<any>();
 
