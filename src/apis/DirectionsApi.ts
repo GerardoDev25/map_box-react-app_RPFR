@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { MAXBOX_KEY } from '../helpers';
 
 export const DirectionsApi = axios.create({
   baseURL: ' https://api.mapbox.com/directions/v5/mapbox/driving',
@@ -7,7 +8,6 @@ export const DirectionsApi = axios.create({
     geometries: 'geojson',
     overview: 'simplified',
     steps: false,
-    access_token:
-      'pk.eyJ1IjoiZ215b2Rlc2Fycm9sbGFkb3IyMyIsImEiOiJjbHFmczg4N3ExMzF1MmtwbDNqZmNhc2V4In0.QIPd3sUgingBCXBoBzPOAw',
+    access_token: MAXBOX_KEY,
   },
 });
